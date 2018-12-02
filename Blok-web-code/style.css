@@ -1,0 +1,36 @@
+article{
+    width: 25em;
+    text-decoration: none;
+    color: white;
+    background-color: #99258d;
+    font-family: sans-serif;
+    margin: 1em;
+    
+}
+form select {
+    display: block;
+}
+
+img {
+    width:100%;
+    
+}
+h3 {
+    color:white;
+    padding-top: 0.1em;
+    margin: 0;
+}
+p {
+    color: white;
+    padding-bottom: 0.5em;
+}
+a {
+    text-decoration: none;
+}
+.verhaaltags {
+    background-color: #ffdf5d;
+    color: black;
+    padding: 0.5em;
+    margin: 0;
+    
+}
