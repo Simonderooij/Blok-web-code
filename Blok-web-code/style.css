@@ -1,36 +1,184 @@
-article{
-    width: 25em;
-    text-decoration: none;
-    color: white;
-    background-color: #99258d;
-    font-family: sans-serif;
-    margin: 1em;
-    
+body {
+    font-family: museo-sans, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+
 }
-form select {
+
+.logo {
+    max-width: 4em;
+    margin: 1em auto;
+
+}
+
+
+.grid-container {
+    display: grid;
+}
+
+article {
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgray;
+    margin: 1em;
+    padding-left: 0.5em;
+}
+
+header img {
+    max-height: 15em;
+    display: none;
+}
+
+article img {
+    height: 8em;
+    object-fit: cover;
+}
+
+label {
+    font-size: 1em;
+    padding: 1em;
+}
+
+form {
     display: block;
+    margin: 0.5em;
+    background-color: white;
+}
+
+select {
+    padding: 1em;
+    width: 100%;
+    margin-left: 1em;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+input {
+    background-color: #808080;
+    color: white;
+    border: none;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding: 1em;
+    font-family: museo-sans, sans-serif;
+    font-size: 1em;
+}
+
+#download {
+    float: right;
+    color: #99258d;
+    font-size: 3em;
+    margin-top: -0.6em;
+    margin-right: 0.4em;
+    text-decoration: underline;
+    text-decoration-color: #ffdf5d;
+}
+#download2 {
+    float: right;
+    font-size: 2em;
+    margin-top: 0.2em;
+    margin-right: 0.3em;
+    color: #99258d;
 }
 
 img {
-    width:100%;
-    
+    width: 100%;
+    display: block;
 }
+h1{
+    text-align: center;
+    font-weight: 300;
+}
+
+h2 {
+    color: white;
+    font-size: 1.2em;
+    padding: 0 1em;
+    font-weight: 300;
+    font-weight: 600;
+
+}
+
 h3 {
-    color:white;
-    padding-top: 0.1em;
+    padding-top: 0.4em;
     margin: 0;
+    font-size: 1.7em;
+    font-weight: 300;
+}
+h4{
+    margin: 0;
+    padding-top: 0.4em;
 }
 p {
-    color: white;
-    padding-bottom: 0.5em;
+    margin: 0.2em
 }
+
 a {
     text-decoration: none;
+    color: white;
 }
-.verhaaltags {
-    background-color: #ffdf5d;
-    color: black;
-    padding: 0.5em;
+
+.titel {
+    background-color: #99258d;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.2em;
+
+}
+
+.material-icons {
+    margin-bottom: -1em;
+}
+
+button {
+    background-color: #99258d;
+    border: none;
+    color: white;
+}
+.alleverhalen{
+    width: 12em;
+    padding-top: 0.2em;
     margin: 0;
+    background-color: #ffdf5d;
+}
+    .grid-container2 {
+        margin: 1em;
+        display: grid;
+        grid-template-columns: 12.2 em;
+        align-content: space-around;
+        grid-gap: 0.2em;
+        justify-content: center;
+        
+    }
+
+
+.item-a{
+    display: none;
+}
+@media only screen and (min-width: 26em) {
+    .grid-container2 {
+        grid-template-columns: 12.2em 12.2em;
+        grid-column-gap: 0.7em;
+    }
     
 }
+
+@media only screen and (min-width: 39em) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        
+
+    }
+    .grid-container2 {
+        grid-template-columns: 12.2em 12.2em 12.2em;
+        grid-column-gap: 0.7em;
+    }
+}
+

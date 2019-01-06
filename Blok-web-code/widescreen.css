@@ -1,0 +1,27 @@
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+
+    h1 {
+    margin-top: 0.5em;
+    margin-right: 5%em;
+    font-size: 3em;
+    font-weight: 300;
+    display: flex;
+    position: absolute; right: 0;
+}
+    header img{
+        display: flex;
+        max-width: 33em;
+        margin-top: 5em;
+        margin-right: 15em;
+        position: absolute;  right: 0;
+    }
+form, header .titel {
+    margin-left: 10%;
+}
+    .grid-container2 {
+        grid-template-columns: 12.2em 12.2em 12.2em 12.2em 12.2em;
+    }
