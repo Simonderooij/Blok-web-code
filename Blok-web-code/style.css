@@ -4,24 +4,43 @@ body {
     font-style: normal;
 
 }
-header div:nth-child(1){ /* logo banner */
 
+header div:nth-child(1) {
+    /* logo banner */
+    background-color: white;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    justify-content: center;
 }
-header div:nth-child(1) a{
-color: #99258d;
+
+header div:nth-child(1) img:nth-child(2) {
+    height: 7em;
+    justify-self: center;
+    margin-bottom: 1em;
+}
+
+header div:nth-child(1) a {
+    color: #99258d;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: bold;
+    justify-self: center;
+    margin-top: 1em;
 }
-header form div:nth-child(1){ /* titel formulier */
+
+header form div:nth-child(1) {
+    /* titel formulier */
     background-color: #99258d;
     height: 3.5em;
     display: flex;
     justify-content: space-between;
 }
-header form div:nth-child(1) h2{ /* h2 van titel formulier */
+
+header form div:nth-child(1) h2 {
+    /* h2 van titel formulier */
     color: white;
 }
-header div:nth-child(3){
+
+header div:nth-child(3) {
     display: none;
 }
 
@@ -33,28 +52,52 @@ article {
     border-style: solid;
     border-width: 1px;
     border-color: lightgray;
-    margin: 1em;
+    margin: 0.8em;
 
     display: block;
 }
-article h3, p{
-        padding-left: 0.5em;
+
+span img {
+    width: 12.3em;
+    outline: 0.5em solid #99258d;
+}
+
+article span {
+    position: absolute;
+    visibility: hidden;
+}
+
+article:hover span {
+    visibility: visible;
+    margin-top: 8em;
+
+}
+
+article h3,
+p {
+    padding-left: 0.5em;
     color: black;
 }
-header img:nth-child(1) {
-    height: 4em;
-}
+
 
 label {
     font-size: 1em;
     padding: 1em;
 }
 
-form {
-    background-color: white;
+.formulier {
+    overflow: hidden;
+    height: 18.5em;
+    -webkit-transition: height 0.3s ease-out;
 }
 
-select, input {
+.closedformulier {
+
+    height: 0em;
+}
+
+select,
+input {
     padding: 1em;
     width: 100%;
     margin-left: 1em;
@@ -62,9 +105,16 @@ select, input {
     margin-top: 0.5em;
     margin-left: auto;
     margin-right: auto;
-    box-sizing:border-box
+    box-sizing: border-box;
 }
-input:nth-child(6) {
+.errors{
+    
+    border-style: solid;
+    border-width: 0.3em;
+    border-color: red;
+    
+}
+input:nth-child(5) {
     background-color: #808080;
     color: white;
     border: none;
@@ -73,21 +123,31 @@ input:nth-child(6) {
     font-family: museo-sans, sans-serif;
     font-size: 1em;
     margin-top: 0.5em;
+    font-weight: bold;
+    border-radius: 0.2em;
 }
+
+input:nth-child(5):hover {
+    background-color: #99258d;
+}
+
 section:nth-of-type(1) {
     display: grid;
     justify-content: center;
 }
+
 section:nth-of-type(2) {
     display: grid;
     grid-template-columns: 12.2 em;
-    grid-column-gap: 0.7em;
-    grid-row-gap: 0.2em;
+    grid-column-gap: 0.2em;
+    grid-row-gap: 0.5em;
     justify-content: center;
 
 }
-section:nth-of-type(1) a:nth-of-type(2), section:nth-of-type(2) a:nth-of-type(1){
-margin-left: 0.5em;
+
+section:nth-of-type(1) a:nth-last-child(1),
+section:nth-of-type(2) a:nth-of-type(1) {
+    margin-left: 0.5em;
 }
 
 h1 {
@@ -115,74 +175,126 @@ h3 {
 
 h4 {
     margin: 0;
+    padding-left: 0.5em;
     padding-top: 0.4em;
 }
-
-section p {
+section p{
+    word-wrap: break-word;
     margin: 0.2em;
 }
 
 .material-icons {
     margin-bottom: -1em;
 }
+
 button {
     background-color: #99258d;
     border: none;
     color: white;
 }
 
+article button{
+    background-color: white;
+    color: black;
+}
 section:nth-of-type(2) article {
-    width: 12.5em;
+    display: grid;
+    width: 12.2em;
+    height: 8em;
     padding-top: 0.2em;
     margin: 0;
+    box-sizing: border-box;
     background-color: #ffdf5d;
+    outline: 0em solid;
+    outline-color: #99258d;
+    transition: outline 0.1s ease;
 }
 
+section:nth-of-type(2) article a:nth-last-child(1) i,
+section:nth-of-type(1) article a:nth-of-type(2) i {
+    color: #99258d;
+}
+section:nth-of-type(1) article a:nth-of-type(2) i{
+    margin-left: 0.5em;
+}
+section:nth-of-type(2) article:hover {
 
-section:nth-of-type(1) img
-{
-        width: 100%;
+    outline-width: 0.4em;
+
+}
+
+section:nth-of-type(2) article p:nth-of-type(2) {
+    align-self: end;
+}
+section:nth-of-type(1) article a img:nth-of-type(1) {
+    width: 100%;
     display: block;
-        height: 8em;
+    height: 8em;
     object-fit: cover;
 }
-
-footer{
+.stars {
+    margin-left: 1em;
+    display: inline-block;
+    
+}
+footer {
     text-align: center;
     background-color: #f4eee8;
     padding: 1em;
-    margin-top: 2em;
+    margin-top: 12em;
 }
 
-footer img{
+footer img {
     max-width: 15em;
     margin: auto;
     padding: 1em;
+
+}
+article object{
+    margin-top: 2em;
+    margin-right: 0.5em;
+    background-color: #ffdf5d;
+    padding: 0.3em;
+    border-radius: 0.2em;
+    text-decoration: none;
+    color: #99258d;
+    cursor: pointer;
+}
+article object:hover {
+    background-color: #99258d;
+        color: #ffdf5d;
+}
+article select {
+    width: 3em;
+    height: 2em;
+    color: black;
+    padding: 0em;
+    margin-left: 1em;
     
 }
 
-a{
-    color: #99258d;
+article a {
+    color: black;
     text-decoration: none;
 }
 
 
-@media only screen and (min-width: 26em) {
+@media only screen and (min-width: 12em) {
     section:nth-of-type(2) {
-        grid-template-columns: 12.2em 12.2em;
+        grid-template-columns: 12.4em 12.4em;
+        grid-column-gap: 0.6em;
     }
 
 }
 
 @media only screen and (min-width: 45em) {
     section:nth-of-type(1) {
-        grid-template-columns: 40% 40%;
-    
+        grid-template-columns: 45% 45%;
+
 
 
     }
-    section:nth-of-type(2) {
-        grid-template-columns: 12.2em 12.2em 12.2em;
-        
-    }
+
 }
+
+@media only screen and (max-width:)

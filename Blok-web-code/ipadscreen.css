@@ -1,11 +1,14 @@
- h2 {
+body{
+    margin: auto;
+}
+h2 {
     color: black;
      font-weight: 600;
     }
     header{
         height: 27em;
         background-image: linear-gradient(to right, #BA55D3, #99258d);
-        margin-bottom: 4em;
+        margin-bottom: 5em;
         
     }
 
@@ -15,27 +18,26 @@
     font-size: 1.7em;
     font-weight: 100;
 }
+form button {
+    display: none;
+}
+
 header div:nth-child(3){
     display: inline-block;
+    margin-left: 6em;
 }
-    header img:nth-child(2){
-        max-width: 21em;
+    header div:nth-child(3) img{
+        max-width: 20em;
+        max-height: 20em;
     }
-    
-button {
-    background-color: #99258d;
-    border: none;
-    width: 4em;
-    color: white;
-    
-}
     form {
         display: inline-block;
-        margin: 0.5em;
+        background-color: white;
         width: 26em;
         margin-left:10%;
         margin-top: 1em;
-        box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.2)
+        box-shadow: 0 0.2em 0.2em 0.2em rgba(0, 0, 0, 0.2);
+        outline: 0em;
     }
 
     select{
@@ -49,7 +51,7 @@ button {
     }
 
     input {
-        color: white;
+        color: black;
         margin-bottom: 0.5em;
         margin-top: 0.5em;
         margin-left: 0.5em;
@@ -57,9 +59,17 @@ button {
     }
     section:nth-of-type(2) {
         grid-template-columns: 12.2em 12.2em 12.2em 12.2em;
+        grid-column-gap: 0.9em;
         
+}
+article select{
+    display: inline-block;
 }
 section:nth-of-type(1){
     grid-template-columns: 40% 40%;
     
+}
+section:nth-of-type(2) article {
+width: 12.5em;
+    height: 8em;
 }
