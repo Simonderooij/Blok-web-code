@@ -39,7 +39,10 @@ header form div:nth-child(1) h2 {
     /* h2 van titel formulier */
     color: white;
 }
-
+h2 i {
+    font-weight: 100;
+    font-size: 0.7em;
+}
 header div:nth-child(3) {
     display: none;
 }
@@ -222,7 +225,6 @@ section:nth-of-type(2) article:hover {
     outline-width: 0.4em;
 
 }
-
 section:nth-of-type(2) article p:nth-of-type(2) {
     align-self: end;
 }
