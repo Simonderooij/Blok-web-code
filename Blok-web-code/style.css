@@ -39,10 +39,12 @@ header form div:nth-child(1) h2 {
     /* h2 van titel formulier */
     color: white;
 }
+
 h2 i {
     font-weight: 100;
     font-size: 0.7em;
 }
+
 header div:nth-child(3) {
     display: none;
 }
@@ -60,26 +62,24 @@ article {
     display: block;
 }
 
-span img {
+section:nth-of-type(2) span img {
     width: 12.3em;
     outline: 0.5em solid #99258d;
 }
 
-article span {
+section:nth-of-type(2) article span {
     position: absolute;
     visibility: hidden;
 }
 
-article:hover span {
+section:nth-of-type(2) article:hover span {
     visibility: visible;
     margin-top: 8em;
 
 }
 
-article h3,
-p {
+article > footer {
     padding-left: 0.5em;
-    color: black;
 }
 
 
@@ -110,13 +110,15 @@ input {
     margin-right: auto;
     box-sizing: border-box;
 }
-.errors{
-    
+
+.errors {
+
     border-style: solid;
     border-width: 0.3em;
     border-color: red;
-    
+
 }
+
 input:nth-child(5) {
     background-color: #808080;
     color: white;
@@ -134,29 +136,37 @@ input:nth-child(5):hover {
     background-color: #99258d;
 }
 
-section:nth-of-type(1) {
+section:nth-of-type(1) > div {
     display: grid;
     justify-content: center;
 }
 
-section:nth-of-type(2) {
+
+section:nth-of-type(2) div {
     display: grid;
     grid-template-columns: 12.2 em;
     grid-column-gap: 0.2em;
     grid-row-gap: 0.5em;
     justify-content: center;
+    margin-top: 1em;
 
 }
+section:nth-of-type(2) > i {
+    margin-left: 1em;
+    display: inline-block;
+}
 
-section:nth-of-type(2) article:nth-last-child(1){
+section:nth-of-type(2) article:nth-last-child(1) {
     background-color: #99258d;
     border-style: none;
     text-align-last: center;
     padding-top: 2em
 }
-section:nth-of-type(2) article:nth-last-child(1) h2{
-      color: #ffdf5d;  
+
+section:nth-of-type(2) article:nth-last-child(1) h2 {
+    color: #ffdf5d;
 }
+
 section:nth-of-type(1) a:nth-last-child(1),
 section:nth-of-type(2) a:nth-of-type(1) {
     margin-left: 0.5em;
@@ -178,21 +188,25 @@ h2 {
 
 h3 {
     padding-top: 0.4em;
-    margin: 0;
+    padding-left: 0.2em;
     font-size: 1.7em;
     font-weight: 300;
     color: black;
-    display: inline-block;
+    display: inline;
+    position: relative;
 }
 
 h4 {
     margin: 0;
-    padding-left: 0.5em;
-    padding-top: 0.4em;
+    
 }
-section p{
+
+section p {
     word-wrap: break-word;
-    margin: 0.2em;
+    margin-bottom: 0em;
+    margin-left: 0.5em;
+    
+    
 }
 
 .material-icons {
@@ -205,14 +219,13 @@ button {
     color: white;
 }
 
-article button{
+article button {
     background-color: white;
     color: black;
 }
+
 section:nth-of-type(2) article {
     display: grid;
-    width: 12.2em;
-    height: 8em;
     padding-top: 0.2em;
     margin: 0;
     box-sizing: border-box;
@@ -222,66 +235,100 @@ section:nth-of-type(2) article {
     transition: outline 0.1s ease;
 }
 
-section:nth-of-type(2) article a:nth-last-child(1) i,
-section:nth-of-type(1) article a:nth-of-type(2) i {
+section:nth-of-type(2) article a:nth-last-child(1) i
+{
     color: #99258d;
 }
-section:nth-of-type(1) article a:nth-of-type(2) i{
-    margin-left: 0.5em;
+section:nth-of-type(2) article p{
+    align-self: flex-end;
 }
+section:nth-of-type(1) article div i {
+    color: #99258d;
+    font-size: 2em;
+    position: absolute;
+}
+section:nth-of-type(1) article{
+    display: flex;
+    flex-direction: column;
+}
+section:nth-of-type(1) article > div:nth-child(4) {
+    display: block;
+    margin-left: 0.5em; 
+    margin-top: auto;
+} 
 section:nth-of-type(2) article:hover {
 
     outline-width: 0.4em;
 
 }
-section:nth-of-type(2) article p:nth-of-type(2) {
-    align-self: end;
-}
+
 section:nth-of-type(1) article a img:nth-of-type(1) {
     width: 100%;
     display: block;
     height: 8em;
     object-fit: cover;
 }
+
 .stars {
     margin-left: 1em;
     display: inline-block;
+
+}
+.popup {
+    visibility: hidden;
     
 }
-footer {
+.show {
+    visibility: visible;
+    margin-top: 0.3em;
+    background-color: red;
+    padding: 0.3em;
+    border-radius: 0.2em;
+    color: white;
+    font-weight: bold;
+    white-space: nowrap;
+}
+body > footer {
     text-align: center;
     background-color: #f4eee8;
     padding: 1em;
     margin-top: 12em;
 }
 
-footer img {
+body > footer img {
     max-width: 15em;
     margin: auto;
     padding: 1em;
 
 }
-article object{
+
+article button {
+    display: inline;
     margin-top: 2em;
     margin-right: 0.5em;
     background-color: #ffdf5d;
+    font-weight: bold;
+    font-family: museo-sans, sans-serif;
     padding: 0.3em;
     border-radius: 0.2em;
     text-decoration: none;
     color: #99258d;
     cursor: pointer;
 }
-article object:hover {
+
+article button:hover {
     background-color: #99258d;
-        color: #ffdf5d;
+    color: #ffdf5d;
 }
+
 article select {
     width: 3em;
     height: 2em;
     color: black;
     padding: 0em;
     margin-left: 1em;
-    
+    display: inline;
+
 }
 
 article a {
@@ -291,7 +338,7 @@ article a {
 
 
 @media only screen and (min-width: 12em) {
-    section:nth-of-type(2) {
+    section:nth-of-type(2) div {
         grid-template-columns: 12.4em 12.4em;
         grid-column-gap: 0.6em;
     }
@@ -299,7 +346,7 @@ article a {
 }
 
 @media only screen and (min-width: 45em) {
-    section:nth-of-type(1) {
+    section:nth-of-type(1) > div {
         grid-template-columns: 45% 45%;
 
 
