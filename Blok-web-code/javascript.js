@@ -19,7 +19,7 @@ searchbutton.addEventListener('click', function(){
 });
 
 var download1 = document.querySelector("section:nth-of-type(1) article:nth-of-type(1) div i");
-var download1popup = document.querySelector("section:nth-of-type(1) article:nth-of-type(1) div span");
+var download1popup = document.querySelector("section:nth-of-type(1) article:nth-of-type(1) div a span");
 download1.addEventListener('click', function(){
     download1.style.color = "lime";
             download1popup.classList.remove("show");
@@ -32,7 +32,7 @@ download1.addEventListener('dblclick', function(){
 });
 
 var download2 = document.querySelector("section:nth-of-type(1) article:nth-of-type(2) div i");
-var download2popup = document.querySelector("section:nth-of-type(1) article:nth-of-type(2) div span");
+var download2popup = document.querySelector("section:nth-of-type(1) article:nth-of-type(2) div a span");
 download2.addEventListener('click', function(){
     download2.style.color = "lime";
             download2popup.classList.remove("show");
@@ -45,7 +45,7 @@ download2.addEventListener('dblclick', function(){
 });
 
 var download3 = document.querySelector("section:nth-of-type(1) article:nth-of-type(3) div i");
-var download3popup = document.querySelector("section:nth-of-type(1) article:nth-of-type(3) div span");
+var download3popup = document.querySelector("section:nth-of-type(1) article:nth-of-type(3) div a span");
 download3.addEventListener('click', function(){
     download3.style.color = "lime";
             download3popup.classList.remove("show");
@@ -58,7 +58,7 @@ download3.addEventListener('dblclick', function(){
 });
 
 var download4 = document.querySelector("section:nth-of-type(1) article:nth-of-type(4) div i");
-var download4popup = document.querySelector("section:nth-of-type(1) article:nth-of-type(4) div span");
+var download4popup = document.querySelector("section:nth-of-type(1) article:nth-of-type(4) div a span");
 download4.addEventListener('click', function(){
     download4.style.color = "lime";
             download4popup.classList.remove("show");
@@ -72,10 +72,10 @@ download4.addEventListener('dblclick', function(){
 
 var sterimagerecept = document.querySelector(".starsrecept");
 var sterbuttonrecept = document.querySelector('.sterknoprecept');
-var popup1 = document.querySelector("section:nth-of-type(1) article:nth-of-type(1) span");
-var popup2 = document.querySelector("section:nth-of-type(1) article:nth-of-type(2) span");
-var popup3 = document.querySelector("section:nth-of-type(1) article:nth-of-type(3) span");
-var popup4 = document.querySelector("section:nth-of-type(1) article:nth-of-type(4) span");
+var popup1 = document.querySelector("section:nth-of-type(1) article:nth-of-type(1) div:nth-of-type(2) span");
+var popup2 = document.querySelector("section:nth-of-type(1) article:nth-of-type(2) div:nth-of-type(2) span");
+var popup3 = document.querySelector("section:nth-of-type(1) article:nth-of-type(3) div:nth-of-type(2) span");
+var popup4 = document.querySelector("section:nth-of-type(1) article:nth-of-type(4) div:nth-of-type(2) span");
 
 
 sterbuttonrecept.addEventListener('click', function(){
